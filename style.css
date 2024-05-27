@@ -1,123 +1,204 @@
 /* Body */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    min-height: 100vh; /* Ensure body covers the full viewport height */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    min-height: 100vh;
+    /* Ensure body covers the full viewport height */
     width: auto;
 }
 
 /* Navigation Bar */
 nav {
     background-color: #7600bc;
-    padding: 10px 20px; /* Adjust padding for smaller screens */
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
-    width: auto;
+    padding: 10px 20px;
+    /* Adjust padding for smaller screens */
+    /* Adjust margin for smaller screens */
+    /* width: auto; */
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin-left: -1cm;
-    margin-right: -1cm;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
+
 .profile_name {
-    color: lightgray;
+    color: white;
     font-size: 20px;
     font-style: normal;
     /* Adjust padding for smaller screens */
-    padding: 0 7px 7px 7px; 
+    padding: 10px;
+
+}
+
+.profile_name hr {
+    margin-right: 20px;
+    width: auto;
 }
 
 .profile_name img {
     max-width: 25px;
     max-height: 25px;
+    margin-right: 20px;
+}
+
+#contact_indent {
+    margin-left: 25px;
 }
 
 .contact_info {
-    font-size: 13px;
+    font-size: 14px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
 }
 
 
 #linkedin {
-    color: lightgray;
+    color: white;
     text-decoration: none;
 }
 
 #linkedin:hover {
-    color: blue;
+    color: rgb(4, 4, 111);
     text-decoration: underline;
 }
 
-.topdiv {
-    display: flex;
-    justify-content: start;
-    flex-flow: wrap;
-}
-.topmenu {
-    color: lightgray;
-    margin: 5px 5px 5px 7px;
-    padding: 10px 10px 10px 0;
-    font-size: 20px;
-    text-decoration: none;
-    float: bottom;
+
+/* Hamburger menu div */
+.hamnav {
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 0;
+    word-wrap: break-word;
+    width: auto;
 }
 
-.topmenu:hover {
-    color: blue;
-    /* Add the styles here */
+.hamlabel {
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+#hamburger {
+    display: none;
+    /* Hide the checkbox */
+}
+
+#hamitems {
+    /* Hide the menu items initially */
+    display: none;
+    /* Position it below the hamburger */
+    /* top: 100%;  */
+    background-color: #5b038e;
+    /* Match the background color of nav */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.hamnav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+
+.hamnav a:hover {
     font-weight: bolder;
     text-decoration: underline;
+}
+
+/* Show menu items when checkbox is checked: display row */
+#hamburger:checked~#hamitems {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* enlarging the hamburger manu! */
+label[for="hamburger"] {
+    /* Replace XX with your desired size */
+    font-size: 1.428572em;
 }
 
 /* Titles */
 h2 {
     font-size: 35px;
-    margin: 50px 50px 20px 50px; 
+    margin: 50px 50px 20px 50px;
+    text-shadow: 2px 5px lightgray;
 }
 
-/* Objective Section */
-#objective h1 {
-    font-size: 45px;
-    width: 80%;
-    margin: 40px 0 20px 0 ;
+p {
+    line-height: 1.25;
 }
 
-#objective p {
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Summary section */
+#summary h2 {
+    font-size: 48px;
+    margin-top: 30px;
+}
+
+#summary p {
     font-size: 18px;
-    width: auto; 
-    margin-left: 30px; 
-}
-
-.objective_duo {
-    margin: 0;
-}
-
-div {
+    margin-top: 1.8cm;
+    padding-right: 70px;
+    padding-left: 30px;
+    margin-left: 55px;
     width: auto;
-    margin-left: 50px;
+    margin-bottom: 50px;
 }
+
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .img_container {
-    width: 100%; /* Ensure image container covers full width */
-    max-width: 400px; /* Limit max-width for larger screens */
-    margin: auto; /* Center align image container */
+    width: 100%;
+    /* Ensure image container covers full width */
+    max-width: 400px;
+    /* Limit max-width for larger screens */
+    margin: auto;
+    /* Center align image container */
     position: relative;
 }
 
 #profile_image {
-    width: 100%; /* Ensure image covers full width of container */
-    max-width: 100%; /* Ensure image scales properly */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 0; /* Reset margin for smaller screens */
-    margin-right: 0; /* Reset margin for smaller screens */
-    margin-top: 20px;
+    width: 100%;
+    /* Ensure image covers full width of container */
+    max-width: 95%;
+    /* Ensure image scales properly */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-left: 10px;
+    /* Reset margin for smaller screens */
+    margin-right: 10px;
+    /* Reset margin for smaller screens */
+    margin-top: 50px;
+    /* This worked so well to hide some overlay at the bottom */
+    margin-bottom: -3px;
+
 }
 
 .overlay {
-    margin-left: 0; /* Reset margin for smaller screens */
-    text-align: center; /* Center align text */
+    margin-left: 10px;
+    /* Reset margin for smaller screens */
+    text-align: center;
+    /* Center align text */
     bottom: 0;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
@@ -131,50 +212,23 @@ div {
     padding: 20px;
     position: absolute;
 }
+
 .img_container:hover .overlay {
     opacity: 1;
 }
 
-
-/* Qualifications */
-.all_qualifications {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap; 
-}
-
-.qualifications {
-    border: 1px solid gray;
-    color: lightgray;
-    display: block;
-    border-radius: 15px;
-    text-align: unset;
-    margin: 30px 80px 50px 30px;
-    padding: 11px 25px 15px 30px;
-    width: 3.2in;
-    font-size: 18px;
-    box-shadow: 0 10px 15px rgb(102, 102, 102);
-    background-image: linear-gradient(rgb(8, 3, 115), rgb(89, 200, 237));
-    font-weight: normal;
-    transition: 2s;
-}
-
-.qualifications:hover {
-    width: 3.6in;
-    background-image: linear-gradient(rgb(60, 51, 228), rgb(89, 200, 237));
-}
-
 /* Skills */
 .skills_section {
-    margin: 30px 30px 50px 80px;
+    margin: 30px 30px 0px 80px;
 }
 
 .skills_section button {
-    background-image: linear-gradient(rgb(60, 51, 228), rgb(89, 200, 237));
+    background-image: linear-gradient(rgb(4, 4, 111), rgb(30, 145, 183));
     color: white;
     padding: 7px;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgb(102, 102, 102);
+    width: 125px;
 }
 
 #skillsList {
@@ -186,6 +240,36 @@ div {
 li::first-letter {
     text-transform: uppercase;
 }
+
+/* Qualifications */
+.all_qualifications {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+
+.qualifications {
+    border: 1px solid gray;
+    color: lightgray;
+    display: block;
+    border-radius: 15px;
+    text-align: unset;
+    margin: 30px 80px 50px 80px;
+    padding: 11px 25px 15px 30px;
+    width: 3.2in;
+    font-size: 18px;
+    box-shadow: 0 10px 15px rgb(102, 102, 102);
+    background-image: linear-gradient(rgb(4, 4, 111), rgb(30, 145, 183));
+    font-weight: normal;
+    transition: 2.5s;
+}
+
+.qualifications:hover {
+    transform: translateY(2%);
+}
+
+
 /* Professional Experience */
 .professional_experience {
     width: auto;
@@ -197,16 +281,16 @@ li::first-letter {
     padding-bottom: 35px;
     /* width: 13in; */
     border-radius: 15px;
+    display: block;
+    margin-right: 50px;
     margin-top: 50px;
     margin-left: 80px;
-    transition: all 1.5s;
+    transition: all 2.5s;
 }
 
 .professional_experience:hover {
-    transform: translateY(27px);
-    background-image: linear-gradient( rgb(248, 177, 96), rgb(243, 240, 240)) ;
-    font-size: 19px;
-    width: 12.9in;
+    transform: translateY(2%);
+    background-image: linear-gradient(rgb(181, 180, 182), rgb(252, 252, 252));
 }
 
 .professional_experience h6 {
@@ -241,56 +325,66 @@ li::first-letter {
 }
 
 /* Education */
+
 .bg {
     background-image: url("./html_finalprojimages/campus-spring.jpg");
-    width: auto; 
-     /* Center education section */
+    width: auto;
+    /* Center education section */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     border-radius: 15px;
     color: rgb(9, 9, 9);
-    height: 550px ;
+    height: 100%;
     padding-bottom: 5px;
     box-shadow: 0 10px 15px rgb(102, 102, 102);
-    /* margin-top: 40px; */
-    margin-left: 90px;
+    display: block;
+    margin-left: 80px;
+    margin-right: 50px;
+    transition: all 2.5s;
+}
+
+.bg:hover {
+    transform: translateY(2%);
+    height: 100%;
 }
 
 .education-card {
-    width: 89%;
-    height: 270px;
-    background-color: rgba(32, 32, 130, 0.326);
+    width: 80%;
+    height: 70%;
     padding: 30px 40px 50px 40px;
     font-size: 18px;
     border-radius: 15px;
-    color: rgb(247, 249, 248);
-    transition: all 1.5s;
+    color: white;
+    background-color: rgba(0, 0, 128, 0.367);
+    transition: all 2.5s;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .education-card:hover {
-    transform: translateY(40%);
-    font-size: 19px;
-    width: 88%;
+    transform: translateY(5%);
+    background-color: rgba(0, 0, 128, 0.719);
     height: auto;
-    margin-top: 30px;
-    color: rgb(237, 174, 49);
-    font-weight: bolder;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .education-card h3 {
-    margin-left: 0; /* Reset margin for smaller screens */
-    /* margin-top: 10px ; */
-    
+    margin-left: 0;
+
 }
 
 .education-card li {
-    margin-left: 0; /* Reset margin for smaller screens */
+    margin-left: 0;
+    /* Reset margin for smaller screens */
 }
 
 /* Copy right */
 #copy_right {
     font-size: 11px;
-    text-align: center; /* Center align copy right text */
+    text-align: center;
+    /* Center align copy right text */
 }
 
 .iconbutton {
@@ -309,8 +403,6 @@ li::first-letter {
 }
 
 .iconbutton:hover {
-    width: 50px;
-    height: 50px;
     transform: rotate(360deg);
     background: rgb(32, 32, 130);
 }
